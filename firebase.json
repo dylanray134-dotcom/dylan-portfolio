@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "dylan-womack-portfolio",
     "public": "out",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
