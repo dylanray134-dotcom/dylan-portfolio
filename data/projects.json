@@ -1,0 +1,276 @@
+{
+  "owner": {
+    "name": "Dylan Womack",
+    "email": "dylanray134@gmail.com",
+    "github": "https://github.com/dylanray134-dotcom",
+    "tagline": "Indie apps and web tools \u2014 motorcycles, stars, weather, and everyday utilities."
+  },
+  "site": {
+    "title": "Dylan Womack",
+    "preferred_vercel_project_name": "dylan-portfolio",
+    "preferred_url_slugs": [
+      "dylan-portfolio",
+      "dylanwomack"
+    ],
+    "stack": "Next.js App Router + TypeScript + Tailwind. Installable PWA. Mobile-first, dark modern aesthetic."
+  },
+  "critical_corrections": [
+    "Do NOT use Honda trademarks (wing mark / HONDA wordmark) as the Motorcycle Catalog portfolio logo. Create an original red motorcycle glyph app icon instead. Delete any Honda wing assets previously copied from apple-touch-icon.",
+    "Omit Catalog Stats from the public portfolio (owner-only).",
+    "Omit Catastrophe / AI Cat Videos (site deleted 2026-09-08).",
+    "Omit Agent Zero as a public product (Grok Bot assistant only; no live URL).",
+    "Latch privacy URL is https://latch-lock-dylan.web.app/privacy (not privacy.html)."
+  ],
+  "projects": [
+    {
+      "id": "motorcycle-catalog",
+      "name": "Motorcycle Catalog",
+      "short": "Verified Honda motorcycle catalog with real US factory colors and photos.",
+      "description": "Browse Honda motorcycles sold in the US by year and model. Verified factory colors with matching photos, search, compare, favorites, request a bike, and Home Screen / PWA install. Not an official Honda product. Native iOS companion in TestFlight.",
+      "links": [
+        {
+          "label": "Open catalog",
+          "url": "https://honda.motorcycle-catalog.here.now/"
+        },
+        {
+          "label": "TestFlight",
+          "url": "https://testflight.apple.com/join/5vMs3Eas"
+        },
+        {
+          "label": "GitHub (web)",
+          "url": "https://github.com/dylanray134-dotcom/motorcycle-catalog-web"
+        },
+        {
+          "label": "GitHub (iOS)",
+          "url": "https://github.com/dylanray134-dotcom/motorcycle-catalog-ios"
+        }
+      ],
+      "logo": null,
+      "logo_instruction": "Create original red (#e60012) motorcycle glyph app icon. No Honda wing, no HONDA lettering.",
+      "tags": [
+        "Web",
+        "PWA",
+        "iOS"
+      ],
+      "privacy": {
+        "summary": "Optional Google sign-in for favorites, bike requests, and push. Aggregate visitor analytics via host. No published dedicated privacy page on the catalog yet \u2014 write an accurate portfolio policy from these facts.",
+        "collects": [
+          "Optional Google account for favorites/requests/push",
+          "Browser push subscription if enabled",
+          "Aggregate hosting visitor analytics"
+        ],
+        "does_not": [
+          "Sell personal data",
+          "Expose which account favorited which bike",
+          "Third-party ads"
+        ]
+      }
+    },
+    {
+      "id": "polaris",
+      "name": "Polaris",
+      "short": "Interactive 3D star atlas and solar system explorer.",
+      "description": "Browse the sky, open realistic star and planet close-ups, keep an exploration log, and sync progress when signed in. Web PWA plus native iOS (App Store review in progress) and Android internal testing.",
+      "links": [
+        {
+          "label": "Open Polaris",
+          "url": "https://polaris-b65ad.web.app/"
+        },
+        {
+          "label": "TestFlight",
+          "url": "https://testflight.apple.com/v1/app/6811066772"
+        },
+        {
+          "label": "GitHub (iOS)",
+          "url": "https://github.com/dylanray134-dotcom/polaris-ios"
+        },
+        {
+          "label": "GitHub (web)",
+          "url": "https://github.com/dylanray134-dotcom/polaris-pwa"
+        }
+      ],
+      "logo": "logos/polaris.png",
+      "tags": [
+        "Web",
+        "PWA",
+        "iOS",
+        "Android"
+      ],
+      "privacy": {
+        "summary": "Sign-in optional (Google and/or Sign in with Apple). Signed-in users sync exploration log / discovered stars to Firebase. Guest use needs no account. No advertising use of auth.",
+        "collects": [
+          "Optional account identifiers from Google/Apple (Hide My Email supported)",
+          "Exploration log / discovered stars when signed in",
+          "Standard Firebase Hosting logs"
+        ],
+        "does_not": [
+          "Require an account to explore",
+          "Use Sign in with Apple/Google for ads or tracking",
+          "Sell personal data"
+        ]
+      }
+    },
+    {
+      "id": "latch",
+      "name": "Latch Lock Sounds",
+      "short": "Generate original Tesla lock chimes and download LockChime.wav.",
+      "description": "Play, generate, and download original lock-chime sounds (44.1 kHz, 16-bit PCM mono) on web and iOS, including a USB Boombox path for the car.",
+      "links": [
+        {
+          "label": "Open Latch",
+          "url": "https://latch-lock-dylan.web.app"
+        },
+        {
+          "label": "Privacy policy",
+          "url": "https://latch-lock-dylan.web.app/privacy"
+        },
+        {
+          "label": "TestFlight",
+          "url": "https://testflight.apple.com/join/mG2x2xAt"
+        },
+        {
+          "label": "GitHub (web)",
+          "url": "https://github.com/dylanray134-dotcom/latch-lock-sounds"
+        },
+        {
+          "label": "GitHub (iOS)",
+          "url": "https://github.com/dylanray134-dotcom/latch-ios"
+        }
+      ],
+      "logo": "logos/latch.png",
+      "existing_privacy_url": "https://latch-lock-dylan.web.app/privacy",
+      "tags": [
+        "Web",
+        "iOS",
+        "Audio"
+      ],
+      "privacy": {
+        "summary": "Synthesis is on-device in the browser. No accounts, analytics, ads, or location. Generated audio is not uploaded. Mirror https://latch-lock-dylan.web.app/privacy.",
+        "collects": [
+          "Ordinary Firebase Hosting connection data",
+          "Google Fonts requests"
+        ],
+        "does_not": [
+          "Accounts",
+          "Analytics/ads/tracking pixels",
+          "Location",
+          "Upload of generated audio"
+        ]
+      }
+    },
+    {
+      "id": "hours-tracker",
+      "name": "Hours Tracker",
+      "short": "Track jobs, hours, and pay \u2014 web PWA and native iOS.",
+      "description": "Weekly and monthly timesheets with Google sign-in, private per-account Firestore data, clock in/out, history, reports, and CSV/Excel/PDF export. Web companion at hours-tracker-dylan.web.app; native iOS on TestFlight (internal).",
+      "links": [
+        {
+          "label": "Open web app",
+          "url": "https://hours-tracker-dylan.web.app"
+        },
+        {
+          "label": "GitHub (iOS)",
+          "url": "https://github.com/dylanray134-dotcom/hours-tracker-ios"
+        },
+        {
+          "label": "GitHub (web)",
+          "url": "https://github.com/dylanray134-dotcom/hours-tracker-web"
+        }
+      ],
+      "logo": "logos/hours-tracker.png",
+      "tags": [
+        "Web",
+        "PWA",
+        "iOS"
+      ],
+      "privacy": {
+        "summary": "Google Sign-In keeps jobs, hours, notes, and pay private to your account in Firestore. No public TestFlight join to advertise.",
+        "collects": [
+          "Google account identity",
+          "Jobs, hours, pay, notes you enter"
+        ],
+        "does_not": [
+          "Share your hours with other users",
+          "Sell personal data",
+          "Third-party ads"
+        ]
+      }
+    },
+    {
+      "id": "location-tracker",
+      "name": "Personal Location Tracker",
+      "short": "Map-first visit tracker with geofences, categories, and exports.",
+      "description": "Native iOS Liquid Glass map app: save places, auto-record arrive/leave via geofences (manual backup), custom categories, Live Activities, CSV/Excel/PDF exports with map + time spent, and custom photo or Google Street View per place.",
+      "links": [
+        {
+          "label": "TestFlight",
+          "url": "https://testflight.apple.com/join/qaSvDc93"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/dylanray134-dotcom/location-tracker-ios"
+        }
+      ],
+      "logo": "logos/location-tracker.png",
+      "tags": [
+        "iOS",
+        "Maps"
+      ],
+      "privacy": {
+        "summary": "Location is sensitive and stays under your control on device / optional private CloudKit. Portfolio site collects no location. No published policy URL yet \u2014 write from these facts.",
+        "collects": [
+          "Device location when authorized",
+          "Place labels, categories, visit times, optional photos",
+          "Optional Street View fetch when you request it",
+          "Optional iCloud/CloudKit sync of your content"
+        ],
+        "does_not": [
+          "Sell location data",
+          "Third-party analytics/ads",
+          "Publish visits on this portfolio"
+        ]
+      }
+    },
+    {
+      "id": "dfw-radar",
+      "name": "DFW Radar",
+      "short": "Live WFAA metro radar for Dallas\u2013Fort Worth.",
+      "description": "Full-screen DFW metro radar and local weather. Landscape WFAA MyOwnRadar layers, playback, clutter filter, location-based conditions, and settings that remember zoom, speed, and region. Web PWA plus native iOS (TestFlight internal).",
+      "links": [
+        {
+          "label": "Open web app",
+          "url": "https://dfw-radar.vercel.app"
+        },
+        {
+          "label": "GitHub (web)",
+          "url": "https://github.com/dylanray134-dotcom/dfw-radar-web"
+        },
+        {
+          "label": "GitHub (iOS)",
+          "url": "https://github.com/dylanray134-dotcom/dfw-radar"
+        }
+      ],
+      "logo": "logos/dfw-radar.png",
+      "tags": [
+        "Web",
+        "PWA",
+        "iOS",
+        "Weather"
+      ],
+      "privacy": {
+        "summary": "Optional location only for place name and free weather. Radar tiles from WFAA via same-origin proxy. No accounts. Preferences in localStorage.",
+        "collects": [
+          "Optional device location if allowed",
+          "localStorage preferences",
+          "Standard hosting logs"
+        ],
+        "does_not": [
+          "Require location for radar",
+          "Accounts",
+          "Sell personal data",
+          "Third-party ads"
+        ]
+      }
+    }
+  ]
+}
