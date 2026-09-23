@@ -28,8 +28,8 @@ export default function SitePrivacyPage() {
           project’s own site, TestFlight, or GitHub when a link is listed.
         </p>
         <p>
-          Catalog browsing, star maps, sounds, hours, location history, radar, and removal requests
-          happen in those separate projects, not on this page.
+          Catalog browsing, star maps, sounds, hours, location history, and radar happen in those
+          separate projects, not on this page.
         </p>
       </PolicySection>
 

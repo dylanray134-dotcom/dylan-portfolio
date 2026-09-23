@@ -1,6 +1,7 @@
 import { PolicyList, PolicySection, policyLinkClass } from "@/components/policy-layout";
+import { latchLivePolicyUrl } from "@/lib/projects";
 
-export const latchPolicyUrl = "https://latch-lock-dylan.web.app/privacy.html";
+export const latchPolicyUrl = latchLivePolicyUrl;
 
 export function LatchPolicy() {
   return (
@@ -9,7 +10,7 @@ export function LatchPolicy() {
         <p>
           The policy for the Latch website is published at{" "}
           <a className={policyLinkClass} href={latchPolicyUrl} target="_blank" rel="noopener noreferrer">
-            latch-lock-dylan.web.app/privacy.html
+            latch-lock-dylan.web.app/privacy
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
           . The details below match that page.

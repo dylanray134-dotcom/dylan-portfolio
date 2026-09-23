@@ -104,12 +104,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.description}
         </p>
 
-        {project.id === "dfw-radar" ? (
-          <p className="mt-5 max-w-3xl rounded-2xl border border-line bg-panel px-4 py-3 text-sm leading-relaxed text-muted">
-            A stable public URL is not listed yet. The web and iOS source are on GitHub.
-          </p>
-        ) : null}
-
         <section className="mt-10" aria-labelledby="links-heading">
           <h2 id="links-heading" className="font-display text-2xl tracking-tight">
             Links
