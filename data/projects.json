@@ -1,0 +1,145 @@
+{
+  "owner": {
+    "name": "Dylan Womack",
+    "email": "dylanray134@gmail.com",
+    "github": "https://github.com/dylanray134-dotcom",
+    "tagline": "Indie apps and web tools — motorcycles, stars, weather, and everyday utilities."
+  },
+  "site": {
+    "title": "Dylan Womack",
+    "preferred_vercel_project_name": "dylan-portfolio",
+    "preferred_url_slugs": ["dylan-portfolio", "dylanwomack", "dylan-womack"],
+    "stack": "Next.js App Router + TypeScript + Tailwind. Installable PWA (manifest + service worker). Mobile-first, dark modern aesthetic."
+  },
+  "projects": [
+    {
+      "id": "motorcycle-catalog",
+      "name": "Motorcycle Catalog",
+      "short": "Honda motorcycle catalog with real factory colors and photos.",
+      "description": "Browse Honda motorcycles sold in the US by year and model. Each bike shows verified factory colors with matching photos, search, compare, favorites, and Home Screen / PWA install. Built as a fast web catalog and expanding to native iOS.",
+      "links": [
+        {"label": "Open catalog", "url": "https://honda.motorcycle-catalog.here.now/"},
+        {"label": "GitHub (web)", "url": "https://github.com/dylanray134-dotcom/motorcycle-catalog-web"},
+        {"label": "GitHub (iOS)", "url": "https://github.com/dylanray134-dotcom/motorcycle-catalog-ios"}
+      ],
+      "logo": "logos/motorcycle-catalog.png",
+      "tags": ["Web", "PWA", "iOS", "Honda"],
+      "privacy": {
+        "summary": "Catalog browsing works without an account. Optional Google sign-in enables private favorites and notifications. Catalog Stats is a separate owner-only dashboard and is not part of this public portfolio project. No advertising SDKs; no sale of personal data.",
+        "collects": ["Optional Google account email for favorites/notifications", "Browser push subscription if notifications enabled", "Basic hosting analytics on the catalog host (aggregate visitors)"],
+        "does_not": ["Sell personal data", "Third-party ads / cross-app tracking", "Expose which account favorited which bike publicly"]
+      }
+    },
+    {
+      "id": "polaris",
+      "name": "Polaris",
+      "short": "Interactive atlas of nearby stars and the solar system.",
+      "description": "A 3D star atlas for exploring nearby stars and solar-system bodies with NASA-style planet views, constellation notes, size compare, and a Sol dossier. Available as a web app (Vite + Three.js) plus native iOS (TestFlight) and Android shell.",
+      "links": [
+        {"label": "Open Polaris", "url": "https://polaris-b65ad.web.app/"},
+        {"label": "TestFlight", "url": "https://testflight.apple.com/v1/app/6811066772"},
+        {"label": "GitHub (iOS)", "url": "https://github.com/dylanray134-dotcom/polaris-ios"},
+        {"label": "GitHub (web)", "url": "https://github.com/dylanray134-dotcom/polaris-pwa"}
+      ],
+      "logo": "logos/polaris.png",
+      "logo_url": "https://polaris-b65ad.web.app/icons/icon-512.png",
+      "tags": ["Web", "PWA", "iOS", "Android", "Three.js"],
+      "privacy": {
+        "summary": "Polaris runs client-side in the browser / on device. No account required for the public web atlas. Location is not required. No advertising SDKs.",
+        "collects": ["Standard Firebase Hosting request logs", "Optional Apple diagnostics if the user enables them on iOS"],
+        "does_not": ["Require an account to explore the atlas", "Sell personal data", "Third-party ads"]
+      }
+    },
+    {
+      "id": "latch",
+      "name": "Latch Lock Sounds",
+      "short": "Generate unique Tesla-style lock chirps you can download and play.",
+      "description": "Web (and TestFlight iOS) generator for Tesla lock-event sounds. Press Generate for a fresh chirp with new form, pitch, interval, and timing; play it in the browser or download it for use as a custom lock sound.",
+      "links": [
+        {"label": "Open Latch", "url": "https://latch-lock-dylan.web.app"},
+        {"label": "TestFlight", "url": "https://testflight.apple.com/join/mG2x2xAt"},
+        {"label": "GitHub (web)", "url": "https://github.com/dylanray134-dotcom/latch-lock-sounds"},
+        {"label": "GitHub (iOS)", "url": "https://github.com/dylanray134-dotcom/latch-ios"}
+      ],
+      "logo": "logos/latch.svg",
+      "tags": ["Web", "iOS", "Audio", "Tesla"],
+      "privacy": {
+        "summary": "Sound generation runs in the browser / on device. No account is required on the web app. Generated audio stays on your device unless you download and share it yourself.",
+        "collects": ["Standard hosting request logs"],
+        "does_not": ["Upload generated sounds to a server by default", "Sell personal data", "Third-party ads"]
+      }
+    },
+    {
+      "id": "hours-tracker",
+      "name": "Hours Tracker",
+      "short": "Track jobs, hours, and pay — web PWA and native iOS.",
+      "description": "Weekly grid for jobs and hours with pay totals, month view, Google sign-in for private per-account data, CSV import/export, and a Liquid Glass native iOS companion on TestFlight.",
+      "links": [
+        {"label": "Open web app", "url": "https://hours-tracker-dylan.web.app"},
+        {"label": "GitHub (web)", "url": "https://github.com/dylanray134-dotcom/hours-tracker-web"},
+        {"label": "GitHub (iOS)", "url": "https://github.com/dylanray134-dotcom/hours-tracker-ios"}
+      ],
+      "logo": "logos/hours-tracker.png",
+      "tags": ["Web", "PWA", "iOS", "Firebase"],
+      "privacy": {
+        "summary": "Hours and job data are private to your signed-in Google account (Firestore). The web app uses Google sign-in so Safari keeps your session. No advertising SDKs.",
+        "collects": ["Google account identity for sign-in", "Job names, hours, pay, and related entries you enter", "Optional custom background synced to your account"],
+        "does_not": ["Sell personal data", "Share your hours with other users", "Third-party ads"]
+      }
+    },
+    {
+      "id": "location-tracker",
+      "name": "Location Tracker",
+      "short": "Map-first place visits with geofences, categories, and exports.",
+      "description": "Native iOS app with a Liquid Glass map-first UI: automatic arrive/leave geofences, manual session start/stop, custom category labels, CSV/Excel/PDF exports, and photo or Street View per place.",
+      "links": [
+        {"label": "GitHub", "url": "https://github.com/dylanray134-dotcom/location-tracker-ios"}
+      ],
+      "logo": null,
+      "tags": ["iOS", "Maps", "Privacy-sensitive"],
+      "privacy": {
+        "summary": "Location data is sensitive. Visits and geofences are intended to stay under your control on device / in your own exports. The portfolio site does not collect location data.",
+        "collects": ["Device location while the app is authorized (Arrive/Leave and manual sessions)", "Place labels, categories, photos you attach", "Export files you choose to create"],
+        "does_not": ["Sell location data", "Show your visits on this portfolio site", "Third-party ads"]
+      }
+    },
+    {
+      "id": "dfw-radar",
+      "name": "DFW Radar",
+      "short": "Live WFAA metro radar for Dallas–Fort Worth in the browser.",
+      "description": "Full-bleed radar stage with frame playback, region presets, overlays (reflectivity, rainfall, hail, rotation), local weather, and installable PWA. Web companion to the DFW Radar iOS app. Optional location only for city name and forecast; radar works without it.",
+      "links": [
+        {"label": "GitHub (web)", "url": "https://github.com/dylanray134-dotcom/dfw-radar-web"},
+        {"label": "GitHub (iOS)", "url": "https://github.com/dylanray134-dotcom/dfw-radar"}
+      ],
+      "logo": "logos/dfw-radar.png",
+      "tags": ["Web", "PWA", "iOS", "Weather"],
+      "privacy": {
+        "summary": "Radar frames are proxied same-origin from WFAA CDN data. Optional location is used only for city name (Nominatim) and forecast (Open-Meteo). Preferences stay in localStorage on your device.",
+        "collects": ["Optional device location if you allow it", "localStorage preferences (region, layers, settings)", "Standard hosting logs on the deploy host"],
+        "does_not": ["Require location for radar", "Sell personal data", "Third-party ads"]
+      },
+      "note": "Live Vercel URL may be a preview hostname; link GitHub for now and update when a stable production domain is assigned."
+    },
+    {
+      "id": "agent-zero",
+      "name": "Agent Zero",
+      "short": "Personal reputation helper for removing data-broker listings.",
+      "description": "After consent, finds people-search / data-broker listings and helps file official removal requests (Gmail or AgentMail), with optional weekly watches so records stay off.",
+      "links": [],
+      "logo": null,
+      "tags": ["Privacy", "Automation"],
+      "privacy": {
+        "summary": "Agent Zero only acts after explicit consent. It handles sensitive personal identifiers solely to find and request removal of public listings. This portfolio page does not run removals or collect those identifiers.",
+        "collects": ["Only what you consent to provide for removal work (name, addresses, listing URLs)", "Email used to send removal requests"],
+        "does_not": ["Sell personal data", "Publish your listings on this portfolio", "Act without consent"]
+      }
+    }
+  ],
+  "exclude_from_public_portfolio": [
+    {
+      "name": "Catalog Stats",
+      "reason": "Owner-only password-protected dashboard for Motorcycle Catalog analytics — not a public product."
+    }
+  ]
+}
