@@ -36,23 +36,20 @@ Git deploys need a GitHub login connection on the Vercel account. If the deploym
 
 If `dylan-portfolio` is already taken on the account, the other preferred slug is `dylanwomack`.
 
-Optional: set `NEXT_PUBLIC_SITE_URL` to the live origin, for example `https://dylan-portfolio.vercel.app` or the Firebase Hosting URL. Canonical URLs, the sitemap, and Open Graph URLs use that value. When it is unset, they default to `https://dylan-portfolio.vercel.app`.
+Optional: set `NEXT_PUBLIC_SITE_URL` before `npm run build` if the live origin is not `https://dylan-womack-portfolio.web.app`. Canonical URLs, the sitemap, and Open Graph URLs use that value.
 
 ## Deploy on Firebase Hosting (free Spark plan)
 
-`.firebaserc` sets the default project id to `dylan-portfolio`. Change that id if the Firebase project uses another name. `firebase.json` publishes the `out` directory.
+The Firebase project and Hosting site are both `dylan-womack-portfolio`. The public URL is `https://dylan-womack-portfolio.web.app`. `.firebaserc` selects that project, and `firebase.json` publishes `out` to that Hosting site only.
 
-1. Create a Firebase project on the [Spark plan](https://console.firebase.google.com/) and enable Hosting. Use the project id `dylan-portfolio`, or edit `.firebaserc` to match the id you created.
-2. Install the CLI and sign in: `npm install -g firebase-tools` then `firebase login`.
-3. From this repository:
+Next.js static export writes each route as an HTML file (`out/projects/polaris.html`). Firebase `cleanUrls` serves that file at `/projects/polaris`. The service worker is copied to `out/sw.js` and still registers in production.
 
 ```bash
-npm install
-npm run build
-firebase deploy --only hosting
+npm ci && npm run build
+firebase deploy --only hosting --project dylan-womack-portfolio
 ```
 
-Hosting serves each exported route as a clean URL (`/projects/polaris` from `out/projects/polaris.html`). The free Spark plan is enough for this static site.
+Sign in first with `firebase login` if the CLI is not already authenticated. This command does not deploy any other Firebase project.
 
 ## What’s included
 

@@ -6,7 +6,7 @@ function stripTrailingSlash(url: string) {
 }
 
 export const siteUrl = stripTrailingSlash(
-  process.env.NEXT_PUBLIC_SITE_URL || "https://dylan-portfolio.vercel.app",
+  process.env.NEXT_PUBLIC_SITE_URL || "https://dylan-womack-portfolio.web.app",
 );
 
 export function pageMetadata({
