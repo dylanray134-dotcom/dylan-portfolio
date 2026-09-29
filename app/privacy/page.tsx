@@ -76,6 +76,13 @@ export default function SitePrivacyPage() {
 
       <PolicySection id="changes" title="Changes">
         <p>If this policy changes, the updated version will be posted on this page with a new date.</p>
+        <p>
+          Copyright in this site is covered on the{" "}
+          <Link href="/copyright" className={policyLinkClass}>
+            Copyright
+          </Link>{" "}
+          page.
+        </p>
       </PolicySection>
     </PolicyLayout>
   );

@@ -1,5 +1,5 @@
-const CACHE = "dylan-portfolio-v2";
-const PRECACHE = ["/", "/projects", "/privacy"];
+const CACHE = "dylan-portfolio-v3";
+const PRECACHE = ["/", "/projects", "/privacy", "/copyright"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
