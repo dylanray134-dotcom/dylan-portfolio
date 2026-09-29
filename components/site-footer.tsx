@@ -25,6 +25,9 @@ export function SiteFooter() {
           <Link href="/privacy" className={footerLink}>
             Privacy
           </Link>
+          <Link href="/copyright" className={footerLink}>
+            Copyright
+          </Link>
         </nav>
       </Shell>
     </footer>

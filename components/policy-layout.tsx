@@ -12,6 +12,8 @@ export function PolicyLayout({
   lede,
   backHref,
   backLabel,
+  updated = policyUpdated,
+  contactLead = "Questions about this policy:",
   children,
 }: {
   kicker: string;
@@ -19,6 +21,8 @@ export function PolicyLayout({
   lede?: string;
   backHref: string;
   backLabel: string;
+  updated?: string;
+  contactLead?: string;
   children: ReactNode;
 }) {
   return (
@@ -35,7 +39,7 @@ export function PolicyLayout({
         <article className="mt-6 max-w-2xl">
           <p className="text-xs font-medium uppercase tracking-[0.28em] text-brass">{kicker}</p>
           <h1 className="mt-3 font-display text-4xl tracking-tight sm:text-6xl">{title}</h1>
-          <p className="mt-4 text-sm text-muted">Last updated {policyUpdated}</p>
+          <p className="mt-4 text-sm text-muted">Last updated {updated}</p>
           {lede ? <p className="mt-6 text-lg leading-relaxed text-pretty text-muted">{lede}</p> : null}
           <div className="mt-8 space-y-10 text-base leading-relaxed">{children}</div>
           <section className="mt-10" aria-labelledby="contact-heading">
@@ -43,7 +47,7 @@ export function PolicyLayout({
               Contact
             </h2>
             <p className="mt-3">
-              Questions about this policy:{" "}
+              {contactLead}{" "}
               <a className={textLink} href={`mailto:${owner.email}`}>
                 {owner.email}
               </a>

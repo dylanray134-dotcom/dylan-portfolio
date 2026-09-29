@@ -3,12 +3,12 @@ import Link from "next/link";
 import { Shell } from "@/components/shell";
 
 const navLink =
-  "inline-flex min-h-11 items-center rounded-full px-2.5 text-sm text-muted hover:text-cream sm:px-3";
+  "inline-flex min-h-11 items-center rounded-full px-2 text-sm text-muted hover:text-cream sm:px-3";
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-ink/75 backdrop-blur-md">
-      <Shell className="flex h-16 items-center justify-between gap-3">
+      <Shell className="flex min-h-16 flex-wrap items-center justify-between gap-x-3 gap-y-1 py-2">
         <Link href="/" className="flex min-w-0 items-center gap-2.5 rounded-full">
           <Image
             src="/icons/icon-192.png"
@@ -27,6 +27,9 @@ export function SiteHeader() {
           </Link>
           <Link href="/privacy" className={navLink}>
             Privacy
+          </Link>
+          <Link href="/copyright" className={navLink}>
+            Copyright
           </Link>
         </nav>
       </Shell>
