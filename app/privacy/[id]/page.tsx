@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LatchPolicy } from "@/components/latch-policy";
 import { PolicyLayout, PolicyList, PolicySection, policyLinkClass } from "@/components/policy-layout";
-import { getProject, projects } from "@/lib/projects";
+import { getProject, latchPolicyUpdated, projects } from "@/lib/projects";
 import { pageMetadata } from "@/lib/site";
 
 type PrivacyPageProps = {
@@ -41,6 +41,7 @@ export default async function ProjectPrivacyPage({ params }: PrivacyPageProps) {
       lede={`This policy describes ${project.name}. It is published on Dylan Womack’s portfolio. Visiting this page does not collect the information below and does not sign you into the project. The portfolio website has its own privacy policy.`}
       backHref={`/projects/${project.id}`}
       backLabel={project.name}
+      updated={project.id === "latch" ? latchPolicyUpdated : undefined}
     >
       <PolicySection id="summary" title="Summary">
         <p>{project.privacy.summary}</p>

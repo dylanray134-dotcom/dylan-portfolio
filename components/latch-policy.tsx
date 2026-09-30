@@ -97,6 +97,21 @@ export function LatchPolicy() {
           new date. This portfolio copy is written to match that page.
         </p>
       </PolicySection>
+
+      <PolicySection id="latch-third-party" title="Third-party marks">
+        <p>
+          Latch is an independent product by Dylan Womack. It is not affiliated with, endorsed by,
+          sponsored by, or connected to Tesla, Inc.
+        </p>
+        <p>
+          Tesla® and related names and marks are trademarks of their respective owners. They are
+          used only to identify the cars Latch is compatible with.
+        </p>
+        <p>
+          Latch generates original lock-chime sounds on your device. It does not claim to
+          redistribute Tesla’s proprietary sounds as official Tesla content.
+        </p>
+      </PolicySection>
     </>
   );
 }
