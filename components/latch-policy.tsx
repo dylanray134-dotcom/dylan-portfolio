@@ -109,7 +109,7 @@ export function LatchPolicy() {
         </p>
         <p>
           Latch generates original lock-chime sounds on your device. It does not claim to
-          redistribute Tesla's proprietary sounds as official Tesla content.
+          redistribute Tesla’s proprietary sounds as official Tesla content.
         </p>
       </PolicySection>
     </>
