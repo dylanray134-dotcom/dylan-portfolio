@@ -61,6 +61,7 @@ function isOmitted(project: { id: string; name: string }) {
 export const owner = raw.owner;
 export const site = raw.site;
 export const policyUpdated = "September 23, 2026";
+export const latchPolicyUpdated = "September 30, 2026";
 
 export const projects: Project[] = raw.projects
   .filter((project) => !isOmitted(project))
