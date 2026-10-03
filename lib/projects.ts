@@ -19,6 +19,7 @@ export type Project = {
   links: ProjectLink[];
   logo: string | null;
   tags: string[];
+  features?: string[];
   privacy: ProjectPrivacy;
   existingPrivacyUrl?: string;
 };
@@ -42,6 +43,7 @@ function toProject(project: RawProject): Project {
     ...("existing_privacy_url" in project && project.existing_privacy_url
       ? { existingPrivacyUrl: project.existing_privacy_url }
       : {}),
+    ...("features" in project && project.features ? { features: [...project.features] } : {}),
   };
 }
 
@@ -62,6 +64,7 @@ export const owner = raw.owner;
 export const site = raw.site;
 export const policyUpdated = "September 23, 2026";
 export const latchPolicyUpdated = "September 30, 2026";
+export const financePolicyUpdated = "October 2, 2026";
 
 export const projects: Project[] = raw.projects
   .filter((project) => !isOmitted(project))

@@ -271,6 +271,47 @@
           "Third-party ads"
         ]
       }
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "short": "Personal finance on iPhone: balances, spending, budgets, and subscriptions.",
+      "description": "Finance is a native iPhone app for one person’s ledger. It shows account balances, spending by day, week, month, and year, and category totals. You can search transactions, import a bank-statement CSV, set monthly budgets, and see repeating charges. Notes about the ledger are computed on the device. On iOS 26 the interface uses Liquid Glass. It ships with a sample ledger so it works with no bank connected.",
+      "links": [],
+      "logo": "logos/finance.png",
+      "tags": [
+        "iOS",
+        "SwiftUI",
+        "personal finance"
+      ],
+      "features": [
+        "Account balances and net worth",
+        "Spending for the day, week, month, and year, with category totals and a chart",
+        "Search by merchant, category, notes, or amount",
+        "Import a statement CSV, and skip rows that are already there",
+        "Monthly budgets with an over-budget mark",
+        "Repeating charges, with confirm or ignore",
+        "On-device notes from the ledger, not a cloud model",
+        "Liquid Glass on iOS 26, and a simpler material on earlier iOS"
+      ],
+      "privacy": {
+        "summary": "Finance keeps one person’s ledger on the iPhone. If the store is empty at launch, it writes a fictional sample ledger, which is not your banks. CSV import stays on the device. The app tries to copy the ledger into your private iCloud database, but this build does not promise that sync completes, so the ledger may stay on the phone only. It does not link a bank, sign you in with Google, or send the ledger to a Finance account server. This portfolio does not collect finance data.",
+        "collects": [
+          "On the phone: account name, institution label, last-four mask, account type, balance, and credit limit",
+          "Transactions, monthly category budgets, and subscriptions stored with the ledger",
+          "Spending suggestions calculated on the device from the ledger",
+          "A statement CSV read on the device and not uploaded",
+          "A private iCloud copy of the ledger, only if iCloud attaches"
+        ],
+        "does_not": [
+          "Link a bank or send bank data anywhere",
+          "Sign you in with Google or create an account",
+          "Promise that iCloud sync works on this build",
+          "Send suggestions to an AI service",
+          "Use ads, tracking, analytics, location, contacts, camera, photos, or the microphone",
+          "Collect finance data on this portfolio"
+        ]
+      }
     }
   ]
 }
