@@ -20,6 +20,7 @@ export default function SitePrivacyPage() {
       lede="This policy covers Dylan Womack’s portfolio website. It is a static marketing site. It has no accounts. Hosting uses standard server logs."
       backHref="/"
       backLabel="Home"
+      updated="October 3, 2026"
     >
       <PolicySection id="what-this-site-is" title="What this site is">
         <p>
@@ -28,8 +29,8 @@ export default function SitePrivacyPage() {
           project’s own site, TestFlight, or GitHub when a link is listed.
         </p>
         <p>
-          Catalog browsing, star maps, sounds, hours, location history, and radar happen in those
-          separate projects, not on this page.
+          Catalog browsing, star maps, sounds, hours, location history, radar, and a personal ledger
+          happen in those separate projects, not on this page.
         </p>
       </PolicySection>
 

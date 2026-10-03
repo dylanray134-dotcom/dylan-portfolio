@@ -104,6 +104,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.description}
         </p>
 
+        {project.features && project.features.length > 0 ? (
+          <section className="mt-10 max-w-3xl" aria-labelledby="features-heading">
+            <h2 id="features-heading" className="font-display text-2xl tracking-tight">
+              Features
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 leading-relaxed marker:text-brass">
+              {project.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
         <section className="mt-10" aria-labelledby="links-heading">
           <h2 id="links-heading" className="font-display text-2xl tracking-tight">
             Links
