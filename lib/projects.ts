@@ -103,12 +103,35 @@ export function isPrivacyLink(url: string) {
   }
 }
 
-/** Primary card action. A live product link wins over GitHub and over a privacy URL. */
+export function isAppStoreLink(url: string) {
+  try {
+    const hostname = new URL(url).hostname;
+    return hostname === "apps.apple.com" || hostname.endsWith(".apps.apple.com");
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Card actions. A live product link wins over GitHub and over a privacy URL.
+ * When an App Store link is also listed, keep the browser link first and the
+ * store link second so the web app stays visible.
+ */
 export function cardLinks(project: Project) {
   const productLinks = project.links.filter(
     (link) => !isGitHubLink(link.url) && !isPrivacyLink(link.url),
   );
   if (productLinks.length > 0) {
+    const appStoreIndex = productLinks.findIndex((link) => isAppStoreLink(link.url));
+    if (appStoreIndex > 0) {
+      return productLinks.slice(0, appStoreIndex + 1);
+    }
+
+    const webLink = productLinks.find((link) => !isAppStoreLink(link.url));
+    if (appStoreIndex === 0 && webLink) {
+      return [webLink, productLinks[0]];
+    }
+
     return [productLinks[0]];
   }
 
