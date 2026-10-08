@@ -70,15 +70,15 @@
       "id": "polaris",
       "name": "Polaris",
       "short": "Interactive 3D star atlas and solar system explorer.",
-      "description": "Browse the sky, open realistic star and planet close-ups, keep an exploration log, and sync progress when signed in. Web PWA plus native iOS (App Store review in progress) and Android internal testing.",
+      "description": "Browse the sky, open realistic star and planet close-ups, keep an exploration log, and sync progress when signed in. Web PWA plus native iOS (on the App Store) and Android internal testing.",
       "links": [
         {
-          "label": "Open Polaris",
+          "label": "Polaris on the web",
           "url": "https://polaris-b65ad.web.app/"
         },
         {
-          "label": "TestFlight",
-          "url": "https://testflight.apple.com/v1/app/6811066772"
+          "label": "App Store",
+          "url": "https://apps.apple.com/us/app/polaris-star-atlas/id6811066772"
         },
         {
           "label": "GitHub (iOS)",
@@ -117,16 +117,16 @@
       "description": "Play, generate, and download original lock-chime sounds (44.1 kHz, 16-bit PCM mono) on web and iOS, including a USB Boombox path for the car.",
       "links": [
         {
-          "label": "Open Latch",
+          "label": "Latch on the web",
           "url": "https://latch-lock-dylan.web.app"
+        },
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/us/app/latch-lock-sounds/id6810968382"
         },
         {
           "label": "Privacy policy",
           "url": "https://latch-lock-dylan.web.app/privacy"
-        },
-        {
-          "label": "TestFlight",
-          "url": "https://testflight.apple.com/join/mG2x2xAt"
         },
         {
           "label": "GitHub (web)",
