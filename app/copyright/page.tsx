@@ -15,7 +15,7 @@ export default function CopyrightPage() {
     <PolicyLayout
       kicker="Portfolio site"
       title="Copyright"
-      updated="October 3, 2026"
+      updated="October 10, 2026"
       contactLead="Questions about this notice:"
       lede="© 2026 Dylan Womack. This notice covers the portfolio and the original work presented on it."
       backHref="/"
@@ -38,7 +38,7 @@ export default function CopyrightPage() {
         />
         <p>
           The original names and concepts shown here include Motorcycle Catalog, Polaris, Latch
-          Lock Sounds, Hours Tracker, Personal Location Tracker, DFW Radar, and Finance.
+          Lock Sounds, Hours Tracker, Personal Location Tracker, DFW Radar, Finance, and Menu App.
         </p>
       </PolicySection>
 
