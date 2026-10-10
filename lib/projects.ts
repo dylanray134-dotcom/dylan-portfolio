@@ -65,6 +65,7 @@ export const site = raw.site;
 export const policyUpdated = "September 23, 2026";
 export const latchPolicyUpdated = "September 30, 2026";
 export const financePolicyUpdated = "October 2, 2026";
+export const menuPolicyUpdated = "October 9, 2026";
 
 export const projects: Project[] = raw.projects
   .filter((project) => !isOmitted(project))
@@ -97,7 +98,8 @@ export function isGitHubLink(url: string) {
 
 export function isPrivacyLink(url: string) {
   try {
-    return /\/privacy\/?$/.test(new URL(url).pathname);
+    const pathname = new URL(url, "https://portfolio.local").pathname;
+    return pathname === "/privacy" || pathname.startsWith("/privacy/");
   } catch {
     return false;
   }

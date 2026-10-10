@@ -312,6 +312,52 @@
           "Collect finance data on this portfolio"
         ]
       }
+    },
+    {
+      "id": "menu",
+      "name": "Menu App",
+      "short": "Snap a photo of any restaurant menu and get a picture menu, with an image and description for every dish.",
+      "description": "Menu App reads a paper menu from your camera or photo library and turns it into a browsable picture menu. Each dish gets its own card with a photo, its price, and a description. It’s a native iOS 26 app built in SwiftUI with Apple’s Liquid Glass design, and it reads and organizes the menu on the device. Now in TestFlight beta (1.0.0, build 2). TestFlight beta: public testing opens once Apple’s beta review clears.",
+      "links": [
+        {
+          "label": "TestFlight beta",
+          "url": "https://testflight.apple.com/join/m9JY1R7j"
+        },
+        {
+          "label": "Privacy policy",
+          "url": "/privacy/menu"
+        }
+      ],
+      "logo": "logos/menu.png",
+      "tags": [
+        "iOS",
+        "SwiftUI",
+        "Apple Intelligence"
+      ],
+      "features": [
+        "Capture a menu with the camera or pick a photo from your library",
+        "On-device text recognition (Apple Vision) that handles multi-column menus",
+        "On-device organization into sections, dishes, and prices (Apple Foundation Models, with a built-in fallback parser)",
+        "A card for every dish with its photo, price, and full description",
+        "Tap a dish for a large detail view with a zoom transition",
+        "Saved menu library you can reopen, rename, and delete",
+        "Liquid Glass design with dark mode, Dynamic Type, and VoiceOver labels"
+      ],
+      "privacy": {
+        "summary": "Menu App turns a photo of a restaurant menu into a picture menu on your iPhone. The photo and the text read from it are processed on the device. Photos are never uploaded. There is no account or sign-in, no analytics, no ads, and no third-party SDKs. Saved menus and dish images stay on the phone. Deleting a menu in the app, or deleting the app, removes them. Current builds send nothing off the phone. A later version may send a dish’s name, description, and cuisine as text so a picture can be created. That is not turned on, and this policy will be updated when it is.",
+        "collects": [
+          "A menu photo from the camera or photo library, processed on the device and not uploaded",
+          "Text read from that photo on the device",
+          "Saved menus, including dish names, prices, descriptions, and dish images, stored only on the phone"
+        ],
+        "does_not": [
+          "Upload menu photos",
+          "Require an account or sign-in",
+          "Use analytics, ads, or third-party SDKs",
+          "Send anything off the phone in the current TestFlight build",
+          "Use the camera or Photos for anything other than capturing the menu"
+        ]
+      }
     }
   ]
 }

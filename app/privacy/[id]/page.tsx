@@ -2,8 +2,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FinancePolicy } from "@/components/finance-policy";
 import { LatchPolicy } from "@/components/latch-policy";
+import { MenuPolicy } from "@/components/menu-policy";
 import { PolicyLayout, PolicyList, PolicySection, policyLinkClass } from "@/components/policy-layout";
-import { financePolicyUpdated, getProject, latchPolicyUpdated, projects } from "@/lib/projects";
+import {
+  financePolicyUpdated,
+  getProject,
+  latchPolicyUpdated,
+  menuPolicyUpdated,
+  projects,
+} from "@/lib/projects";
 import { pageMetadata } from "@/lib/site";
 
 type PrivacyPageProps = {
@@ -47,7 +54,9 @@ export default async function ProjectPrivacyPage({ params }: PrivacyPageProps) {
           ? latchPolicyUpdated
           : project.id === "finance"
             ? financePolicyUpdated
-            : undefined
+            : project.id === "menu"
+              ? menuPolicyUpdated
+              : undefined
       }
     >
       <PolicySection id="summary" title="Summary">
@@ -71,6 +80,7 @@ export default async function ProjectPrivacyPage({ params }: PrivacyPageProps) {
 
       {project.id === "latch" ? <LatchPolicy /> : null}
       {project.id === "finance" ? <FinancePolicy /> : null}
+      {project.id === "menu" ? <MenuPolicy /> : null}
     </PolicyLayout>
   );
 }

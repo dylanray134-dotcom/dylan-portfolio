@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ExternalLink } from "@/components/links";
+import { ExternalLink, ghostButtonClass, solidButtonClass } from "@/components/links";
 import { Shell } from "@/components/shell";
 import {
   getProject,
@@ -9,6 +9,7 @@ import {
   logoSrc,
   projects,
   type Project,
+  type ProjectLink,
 } from "@/lib/projects";
 import { pageMetadata } from "@/lib/site";
 
@@ -49,12 +50,30 @@ function ProjectLinks({ project }: { project: Project }) {
     <ul className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
       {project.links.map((link) => (
         <li key={`${link.label}-${link.url}`}>
-          <ExternalLink href={link.url} tone={linkTone(link, project.links)} className="w-full sm:w-auto">
-            {link.label}
-          </ExternalLink>
+          <ProjectLinkItem link={link} links={project.links} />
         </li>
       ))}
     </ul>
+  );
+}
+
+function ProjectLinkItem({ link, links }: { link: ProjectLink; links: ProjectLink[] }) {
+  const tone = linkTone(link, links);
+
+  if (link.url.startsWith("/")) {
+    const className =
+      tone === "solid" ? solidButtonClass("w-full sm:w-auto") : ghostButtonClass("w-full sm:w-auto");
+    return (
+      <Link href={link.url} className={className}>
+        {link.label}
+      </Link>
+    );
+  }
+
+  return (
+    <ExternalLink href={link.url} tone={tone} className="w-full sm:w-auto">
+      {link.label}
+    </ExternalLink>
   );
 }
 
