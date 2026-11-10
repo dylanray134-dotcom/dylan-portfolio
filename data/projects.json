@@ -26,15 +26,15 @@
       "id": "motorcycle-catalog",
       "name": "Motorcycle Catalog",
       "short": "Verified Honda motorcycle catalog with real US factory colors and photos.",
-      "description": "Browse Honda motorcycles sold in the US by year and model. Verified factory colors with matching photos, search, compare, favorites, request a bike, and Home Screen / PWA install. Not an official Honda product. Native iOS companion in TestFlight.",
+      "description": "Browse Honda motorcycles sold in the US by year and model. Verified factory colors with matching photos, search, compare, favorites, request a bike, and Home Screen / PWA install. Not an official Honda product. Native iOS companion on the App Store.",
       "links": [
         {
-          "label": "Open catalog",
+          "label": "Motorcycle Catalog on the web",
           "url": "https://honda.motorcycle-catalog.here.now/"
         },
         {
-          "label": "TestFlight",
-          "url": "https://testflight.apple.com/join/5vMs3Eas"
+          "label": "App Store",
+          "url": "https://apps.apple.com/us/app/motorcycle-catalog/id6811076375"
         },
         {
           "label": "GitHub (web)",
