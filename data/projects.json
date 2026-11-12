@@ -217,7 +217,7 @@
         "Maps"
       ],
       "privacy": {
-        "summary": "Location is sensitive and stays under your control on device / optional private CloudKit. Portfolio site collects no location. No published policy URL yet \u2014 write from these facts.",
+        "summary": "Location is sensitive and stays under your control on your device, with optional private iCloud (CloudKit) sync. This portfolio site does not collect your location.",
         "collects": [
           "Device location when authorized",
           "Place labels, categories, visit times, optional photos",
